@@ -8,12 +8,12 @@ var digits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 function generatePassword() {
   //prompt user for password criteria
   var passwordLength = prompt("Please select a number between 8 and 128 for the length of your password.")
-  //
+
   while (passwordLength < 8 || passwordLength > 128) {
     window.alert("The number selected was not between 8 and 128. Please try again.")
     passwordLength = prompt("Please select a number between 8 and 128 for the length of your password");
   }
-  //assign the variables to false to begin while loop
+  //assign the variables to false so it matches loop conditions and begin the while loop
   var upper = false
   var lower = false
   var special = false
@@ -29,7 +29,7 @@ function generatePassword() {
       window.alert("You must select at least one option. Please try again.")
     }
   }
-  // computerPick is left blank so we can have it assigned to a new value each if statement.
+  // computerPick is left blank so we can have it assigned to a new value each time
   var computerPick = ""
   for (i = 0; i < passwordLength; i++) {
 
@@ -54,6 +54,7 @@ function generatePassword() {
   return computerPick;
 
 }
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
